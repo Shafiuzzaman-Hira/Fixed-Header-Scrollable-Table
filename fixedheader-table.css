@@ -1,15 +1,9 @@
-/*
-Force table width to 100%
-*/
+/*Force table width to 100%*/
 table.table-fixedheader {
   width: 100%;
 }
 
-/*
-Set table elements to block mode.  (Normally they are inline).
-This allows a responsive table, such as one where columns can be stacked
-if the display is narrow.
-*/
+/* Set table elements to block mode.  (Normally they are inline).This allows a responsive table*/
 table.table-fixedheader,
 table.table-fixedheader>thead,
 table.table-fixedheader>tbody,
@@ -19,7 +13,6 @@ table.table-fixedheader>thead>tr>th,
 table.table-fixedheader>tbody>td {
   display: block;
 }
-
 
 table.table-fixedheader>thead>tr:after,
 table.table-fixedheader>tbody>tr:after {
@@ -32,8 +25,7 @@ table.table-fixedheader>tbody>tr:after {
 /*
 When scrolling the table, actually it is only the tbody portion of the
 table that scrolls (not the entire table: we want the thead to remain
-fixed).  We must specify an explicit height for the tbody.  We include
-100px as a default, but it can be overridden elsewhere.
+fixed).  We must specify an explicit height for the tbody.
 
 Also, we force the scrollbar to always be displayed so that the usable
 width for the table contents doesn't change (such as becoming narrower
@@ -41,17 +33,17 @@ when a scrollbar is visible and wider when it is not).
 */
 table.table-fixedheader>tbody {
   overflow-y: scroll;
-  height: 100px;
+  height: 270px;
 }
 
 /*
 We really don't want to scroll the thead contents, but we want to force
 a scrollbar to be displayed anyway so that the usable width of the thead
 will exactly match the tbody.
-*/
+
 table.table-fixedheader>thead {        
   overflow-y: scroll;
-}
+}*/
 
 /*
 For browsers that support it (webkit), we set the background color of
@@ -66,11 +58,9 @@ table.table-fixedheader>thead::-webkit-scrollbar{
 /*
 We want to set <th> and <td> elements to float left.
 We also must explicitly set the width for each column (both for the <th>
-and the <td>).  We set to 20% here a default placeholder, but it can be
-overridden elsewhere.
+and the <td>).
 */
 table.table-fixedheader>thead>tr>th,
 table.table-fixedheader>tbody>tr>td {
-        width: 20%;
         float: left;
 }
